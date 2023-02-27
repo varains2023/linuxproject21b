@@ -1,0 +1,6 @@
+---
+ - hosts: all
+   gather_facts: false
+   tasks:
+        - name: "To start the vsftpdd service"
+          service: name=vsftpd state=started
