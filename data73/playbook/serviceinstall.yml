@@ -1,0 +1,13 @@
+---
+ - hosts: all
+   tasks:
+   - name: "installing the httpd service"
+     yum: name=httpd state=present
+   - name: "insealling the vsftp service"
+     yum: name=vsftpd state=present
+   - name: "installing the finger service"
+     yum: name=finger state=present
+   - name: "installing the samba service"
+     yum: name=smaba state=present
+   - name: "installing the ntp service"
+     yum: name=ntp state=present

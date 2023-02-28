@@ -1,0 +1,5 @@
+---
+ - hosts: [prod]
+   tasks: 
+   - name: to start vsftpd service
+     service: name=vsftpd state=started

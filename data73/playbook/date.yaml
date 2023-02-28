@@ -1,0 +1,5 @@
+---
+- hosts: prod
+  tasks:
+  - name: "taking output uptime"
+    command: uptime
