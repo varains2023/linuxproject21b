@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+   - name: "services stp"
+     service: name=httpd state=stopped

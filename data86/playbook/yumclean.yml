@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+   - name: "clean yum cache"
+     shell: yum clean all

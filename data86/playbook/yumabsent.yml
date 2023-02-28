@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+   - name: "remove package yum"
+     yum: name=finger state=absent

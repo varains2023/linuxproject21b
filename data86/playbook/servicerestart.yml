@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+   - name: "services restarted"
+     service: name=httpd state=restarted

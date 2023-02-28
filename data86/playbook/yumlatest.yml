@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+   - name: "latest package yum"
+     yum: name=finger state=latest
