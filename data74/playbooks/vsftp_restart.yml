@@ -1,0 +1,6 @@
+---
+ - hosts: vlab
+   tasks:
+    - name: "start vsftpd service "
+      service: name=vsftpd state=restarted
+      
