@@ -1,0 +1,6 @@
+---
+ - hosts: yum
+   tasks:
+    - name: "To start the services"
+      service: name=httpd state=restarted
+      service: name=vsftpd state=restarted
