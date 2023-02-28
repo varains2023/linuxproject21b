@@ -1,0 +1,18 @@
+---
+ - name: services status
+   hosts: all
+   tasks: 
+    - name: service start
+      service: name=httpd state=started
+    - debug: msg="service also starting"
+      tags: httpd
+    - name: service start
+      service: name=vsftpd state=started
+    - debug: msg="service also starting"
+      tags: ftp
+    - name: service start
+      service: name=smbd state=started
+    - debug: msg="service also starting"
+      tags: smbd
+
+ 

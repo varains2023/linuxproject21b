@@ -1,0 +1,20 @@
+---
+ - name: install packages
+   hosts: all
+   tasks:
+    - name: task1
+      yum: name=httpd state=present
+    - debug: msg="httpd service installing"
+      tags: httpd
+    - name: task2
+      yum: name=vsftpd state=present
+    - debug: msg="vsftpd service installing"
+      tags: ftp
+    - name: task3
+      yum: name=samba state=present
+    - debug: msg="samba service installing"
+      tags: smbd
+    - name: task4
+      yum: name=finger state=present
+    - debug: msg="finger command"
+      tags: finger
