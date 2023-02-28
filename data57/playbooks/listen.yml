@@ -1,0 +1,11 @@
+---
+ - name: listen
+   hosts: all
+   tasks:
+    - name: copy httpd file
+      copy: src=/var/www/html/index.html dest=/var/www/html/
+      notify: restart
+   handlers:
+     - name: httpd restert
+       service: name=httpd state=restarted
+       listen: restart   

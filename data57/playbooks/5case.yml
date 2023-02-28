@@ -1,0 +1,7 @@
+---
+ - name: debug module case 5
+   hosts: all
+   tasks:
+    - name: printing host name using "var" parameter in debug module wirh system veriable
+      debug:
+        var: ansible_hostname

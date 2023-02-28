@@ -1,0 +1,7 @@
+---
+ - name: debug modile for case2
+   hosts: all
+   tasks:
+    - name: display  bellow mwssages
+      debug:
+        msg: "eclcome to varains"

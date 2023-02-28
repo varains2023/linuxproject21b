@@ -1,0 +1,7 @@
+---
+ - name: debug module case 6
+   hosts: all
+   tasks:
+    - name: printing ip addr
+      debug:
+        msg: "ip addr is :- {{ansible_default_ipv4.address}}"

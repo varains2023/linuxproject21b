@@ -1,0 +1,14 @@
+---
+  - name: copy sshd configuration file and start the service if incase any changes in file
+    hosts: all
+    tasks:
+     - name: copy sshd configuration file
+       synchronize: src=/etc/ssh/sshd_config dest=/tmp/
+       notify: reset service
+       register: output
+     - debug: var=output
+    handlers:
+     - name: reset service
+       service: name=sshd state=restarted enabled=yes
+       register: serst
+     - debug: var=serst

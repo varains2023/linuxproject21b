@@ -1,0 +1,10 @@
+---
+ - name: debug module case 7
+   hosts: all
+   tasks:
+    - name: printing hostname, fqdn, ipaddr
+      debug:
+        msg:
+           my hostname is {{ansible_hostname}}
+           my fqdn is {{ansible_fqdn}}
+           my ipaddr is {{ansible_facts.default_ipv4}}
