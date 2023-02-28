@@ -1,0 +1,11 @@
+---
+ - hosts: all
+   tasks: 
+    - name: "copy the file fstab to tmp"
+      copy: src="/tmp/scrp.sh" dest="/tmp"
+    - name: "to change the permisions"
+      file: dest=/tmp/scrp.sh mode=755 owner=root group=root
+    - name: "to execute the script"
+      script: /tmp/scrp.sh >> /var/prav
+    - name: "to check output"
+      shell: init 6 
