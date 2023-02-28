@@ -1,0 +1,6 @@
+---
+ - hosts: vlab
+   tasks:
+    - name: "start finger service "
+      service: name=finger state=started
+      
