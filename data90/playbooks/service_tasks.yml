@@ -1,0 +1,18 @@
+---
+ - name: stsrt services
+   hosts: all
+   tasks:
+     - name: service sshd satart
+       service: name=sshd state=started
+     - name: service httpd satart
+       service: name=httpd state=started
+     - name: service autofs satart
+       service: name=autofs state=started
+     - name: service ntpd satart
+       service: name=ntpd state=started
+     - name: service rsyslogd satart
+       service: name=rsyslogd state=started
+     - name: service samba satart
+       service: name=samba state=started
+     - name: service nfs satart
+       service: name=nfs  state=started
