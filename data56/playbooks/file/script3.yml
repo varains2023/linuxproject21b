@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+        - name: "fetch the file from client"
+          fetch: src=/var/tmp/df_output dest=/var/tmp/

@@ -1,0 +1,10 @@
+---
+ - hosts: prod
+   gather_facts: false
+   tasks:
+      - name: hi is basic
+        copy: src=/etc/ssh/sshd_config dest=/tmp/
+        register: edit
+      - name: sshd
+        action: service name=sshd state=restarted
+        when: edit.changed

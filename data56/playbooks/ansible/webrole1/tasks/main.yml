@@ -1,0 +1,4 @@
+---
+ - name: install http
+   package: name=httpd state=latest
+# tasks file for webrole1
