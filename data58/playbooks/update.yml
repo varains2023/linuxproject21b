@@ -1,0 +1,13 @@
+---
+ - name: Patch the server and Reboot
+   hosts: prod
+   tasks:
+     - name: Patch the server
+       shell: "yum -y update"
+     - name: Reboot the server
+       shell: "sleep 5 && reboot"
+     - name: Check the Uptime of the servers
+       shell: "uptime"
+       register: Uptime
+     - debug: var=Uptime
+

@@ -1,0 +1,11 @@
+---
+ - hosts: prod
+   name: usercreating
+   tasks:
+     - name: creating user 
+       user: name="{{item}}" state=present createhome=yes
+       with_items:
+          - swatha
+          - pallavi
+          - navaya
+          - swathi
