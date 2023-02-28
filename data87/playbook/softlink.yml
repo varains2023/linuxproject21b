@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+    - name: "creating soft links"
+      shell: ln -s /tmp/output /opt/output11

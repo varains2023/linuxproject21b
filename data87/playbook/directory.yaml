@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+     - name: "creating a directory"
+       file: dest=/tmp/yuvi state=directory mode=777

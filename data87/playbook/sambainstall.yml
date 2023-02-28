@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+    - name: "installing the samba package"
+      yum: name=samba state=present

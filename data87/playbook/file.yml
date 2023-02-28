@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+    - name: "creating a file in /tmp/kohli"
+      file: dest=/tmp/kohli state=touch mode=655 owner=vara group=vara

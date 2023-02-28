@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+    - name: "starting the samba service"
+      service: name=samba state=started

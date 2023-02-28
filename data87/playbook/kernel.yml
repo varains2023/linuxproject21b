@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+    - name: "kernel upgrade"
+      shell: yum update kernel -y

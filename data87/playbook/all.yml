@@ -1,0 +1,11 @@
+---
+ - hosts: prod
+   tasks:
+     - name: "checking the output of uptime"
+       command: uptime
+   tasks:
+     - name: "creating a file"
+       file: dest=/tmp/sairam state=directory mode=644
+   tasks:
+     - name: "creating a directory"
+       file: dest=/tmp/king state=directory mode=755

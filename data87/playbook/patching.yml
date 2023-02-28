@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+    - name: "patching the server in 7"
+      shell: yum update -y
