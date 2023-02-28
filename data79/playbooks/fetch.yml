@@ -1,0 +1,6 @@
+---
+  - hosts: all
+    tasks:
+    - name: "fetch the data from hosts to client"
+      fetch: src=/tmp/output dest=/tmp/backup
+
