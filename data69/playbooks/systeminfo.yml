@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+    - name: "system-info"
+      shell: "df -h;ifconfig -a;uptime;uname -r;blkid;free -m;"

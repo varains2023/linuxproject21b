@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks: 
+    - name: "copy /etc/hosts file"
+      copy: src=/etc/hosts dest=/tmp/hosts.bkp
