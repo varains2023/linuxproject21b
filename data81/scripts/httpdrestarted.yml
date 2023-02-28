@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks: 
+    - name: "fetch copy the file from tmp/bkpfstab to var/bkp"
+      service: name=httpd state=restarted

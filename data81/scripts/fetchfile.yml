@@ -1,0 +1,5 @@
+---
+ - hosts: all
+   tasks:
+    - name: "store file into /tmp/backup /tmp/sysbackup"
+      fetch: src=/tmp/backup dest=/tmp/sysbackup

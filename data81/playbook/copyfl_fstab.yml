@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks: 
+    - name: "copy the file fstab to tmp"
+      copy: src=/etc/fstab dest=/tmp/bkpfstb

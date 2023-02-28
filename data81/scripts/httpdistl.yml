@@ -1,0 +1,5 @@
+---
+ - hosts:all
+   tasks:
+    - name: "uninstall the httpd package"
+      yum: neme=httpd state=absent
