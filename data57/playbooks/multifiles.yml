@@ -1,0 +1,11 @@
+---
+ - name: multiple files at a time
+   hosts: all
+   tasks:
+    - name: more files at a time
+      file: dest=/tmp/"{{item}}" state=touch
+      with_items:
+          - file1
+          - file2
+          - file3
+          - file4

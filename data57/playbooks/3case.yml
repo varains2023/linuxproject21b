@@ -1,0 +1,10 @@
+---
+ - name: debug module case3
+   hosts: all
+   tasks:
+   - name: display bellow mwssages
+     debug:
+       msg:
+          - welcome to varains
+          - welcome to guruins
+          - welcome to naniins

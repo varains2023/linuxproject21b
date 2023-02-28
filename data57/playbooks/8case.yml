@@ -1,0 +1,8 @@
+---
+ - name: debug module for case8
+   hosts: all
+   tasks:
+    - name: verbosity
+      debug:
+        msg: "my ipaddr:- {{ansible_default_ipv4.address}}"
+        verbosity: 2

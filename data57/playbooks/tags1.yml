@@ -1,0 +1,23 @@
+---
+ - name: my kernel version
+   hosts: all
+   tasks:
+    - name: kernel info
+      command: uname -r
+      register: kernel_info
+      tags:
+            - kernel
+    - name: print output
+      debug: var=kernel_info.stdout
+      tags:
+            - kernelout
+    - name: os version
+      shell: cat /etc/redhat-release
+      register: os_ver
+      tags:
+         - os
+    - name: output
+      debug: var=os_ver.stdout
+      tags:
+         - osout
+
