@@ -1,0 +1,9 @@
+---
+ - name: nagraj
+   hosts: all
+   tasks:
+      - name: vamsi
+        command: uptime
+        register: king
+        tags: environment
+      - debug: var=king.stdout

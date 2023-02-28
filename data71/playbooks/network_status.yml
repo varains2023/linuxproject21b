@@ -1,0 +1,8 @@
+---
+ - hosts: prod
+   gather_facts: false
+   tasks: 
+    - name: "Start service httpd, if not started"
+      shell: service httpd status
+      shell: service vsftpd status
+      shell: service smb status

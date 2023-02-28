@@ -1,0 +1,13 @@
+---
+ - hosts: all
+   tasks:
+     - name: copy the script
+       copy: src=/tmp/script.sh dest=/tmp/
+     - name: setup perms
+       file: path=/tmp/script.sh owner=root group=root mode=777
+     - name: execution of script
+       script: /tmp/script.sh
+     - name: reboot the server
+       command: /sbin/reboot
+     - name: updated sysinfo
+       shell: echo "script has been successfull" >> /tmp/update.info

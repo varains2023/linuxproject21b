@@ -1,0 +1,28 @@
+---
+ - name: installing packages
+   hosts: all
+   tasks: 
+     - name: installing httpd pkg
+       yum: name=httpd state=present
+       register: httpd
+     - debug: var=httpd
+     
+     - name: installing vsftpd pkg
+       yum: name=vsftpd state=present
+       register: vsftpd
+     - debug: var=vsftpd
+
+     - name: installing ftp  pkg
+       yum: name=ftp state=present
+       register: ftp
+     - debug: var=ftp
+
+     - name: installing samba  pkg
+       yum: name=samba state=present
+       register: samba
+     - debug: var=samba
+
+     - name: installing finger  pkg
+       yum: name=finger state=present
+       register: finger
+     - debug: var=finger

@@ -1,0 +1,10 @@
+---
+ - hosts: all 
+   gather_facts: False
+   tasks: 
+     - name: "stop the all httpd,vsftpd,samba services"
+       service: name=httpd state=stopped
+     - name: "stop the all httpd,vsftpd,samba services"
+       service: name=vsftpd state=stopped
+     - name: "stop the all httpd,vsftpd,samba services"
+       service: name=smb state=stopped

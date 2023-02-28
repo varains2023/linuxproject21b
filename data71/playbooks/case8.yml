@@ -1,0 +1,16 @@
+---
+ - name: msg
+   hosts: all
+   tasks:
+     - name: kingkohli
+       debug:
+         msg:
+             my hostname is {{ansible_hostname}}
+             ip address is {{ansible_facts['fqdn']}}
+         verbosity: 1
+     - name: chase-master
+       debug:
+         msg:
+             my hostname is {{ansible_hostname}}
+             ip address is {{ansible_facts['fqdn']}}
+         verbosity: 2

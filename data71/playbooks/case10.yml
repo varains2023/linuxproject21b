@@ -1,0 +1,10 @@
+---
+ - name: nagaraj
+   hosts: all
+   vars:
+     os: "linux"
+     cloud: "aws"
+     tools: "devops"
+   tasks:
+      - debug: msg="{{os}}"
+         

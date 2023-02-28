@@ -1,0 +1,8 @@
+---
+ - name: nagraj
+   hosts: all
+   tasks:
+      - name: vamsi
+	command: uname -a
+        register: time
+      - debug: var=time

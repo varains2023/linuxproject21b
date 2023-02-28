@@ -1,0 +1,8 @@
+---
+ - name: nagraj
+   hosts: all
+   tasks:
+      - name: vamsi
+        command: uptime
+        register: king
+      - debug: var=king

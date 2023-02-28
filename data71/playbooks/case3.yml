@@ -1,0 +1,9 @@
+---
+ - name:
+   hosts: all
+   tasks:
+     - name:
+       debug:
+         msg:
+          - 'line01'
+          - 'line02'

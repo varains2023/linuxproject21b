@@ -1,0 +1,9 @@
+---
+ - hosts: prod
+   gather_facts: False
+   tasks:
+#    - name: "taking output of file"
+#      yum: name=httpd  state=present
+    - name: "starting service"
+      service: name=httpd state=stoped
+      service: name=vsftpd state=stoped

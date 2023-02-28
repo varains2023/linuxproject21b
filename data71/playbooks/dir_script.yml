@@ -1,0 +1,10 @@
+---
+ - hosts: all
+   vars:
+      dir_create: /tmp/naniins/v1/v2/v3/
+      log_file: /var/log/messages
+      rm_dir: /tmp/varains/
+   tasks:
+     - name: creatind directory under tmp fs
+       file: path="{{dir_create}}" state=directory
+       copy: src="{{log_file}}" dest="{{dir_create}}"
