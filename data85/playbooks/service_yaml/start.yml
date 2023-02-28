@@ -1,0 +1,44 @@
+---
+ - hosts: prod
+   gather_facts: false
+   tasks:
+        - name: " vsftp using service"
+          service: name=vsftpd state=started enabled=yes
+          register: vsftp_output
+        - debug: var=vsftp_output.state
+        - name: " http using service"
+          service: name=httpd state=started enabled=yes
+          register: http_output
+        - debug: var=http_output.state
+        - name: " ssh using service"
+          service: name=sshd state=started enabled=yes
+          register: ssh_output
+        - debug: var=ssh_output.state
+        - name: " nfs using service"
+          service: name=nfs state=started enabled=yes
+          register: nfs_output
+        - debug: var=nfs_output.state
+        - name: " autofs using service"
+          service: name=autofs state=started enabled=yes
+          register: auto_output
+        - debug: var=auto_output.state
+        - name: " ntp using service"
+          service: name=ntpd state=started enabled=yes
+          register: ntp_output
+        - debug: var=ntp_output.state
+        - name: " log using service"
+          service: name=rsyslog state=started enabled=yes
+          register: log_output
+        - debug: var=log_output.state
+        - name: "samba using service"
+          service:  name=smb state=started enabled=yes 
+          register: smb_output
+        - debug: var=smb_output.state
+        - name: "nis using service"
+          service:  name=ypserv state=started enabled=yes 
+          register: yp_output
+        - debug: var=yp_output.state
+        - name: "cron using service"
+          service:  name=crond state=started enabled=yes 
+          register: cron_output
+        - debug: var=cron_output.state

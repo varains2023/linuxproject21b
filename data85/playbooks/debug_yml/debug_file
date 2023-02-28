@@ -1,0 +1,141 @@
+####################case11.yml#####################
+---
+ - name: showig variables
+   hosts: prod
+   tasks:
+      - name: server kenel
+        command: uname -a
+        register: ker
+      - debug: var=ker
+####################case13.yml#####################
+---
+ - name: showig variables
+   hosts: prod
+   tasks:
+      - name: server kenel
+        command: uname -a
+        register: ker
+      - debug: var=ker.stdout
+####################case14.yml#####################
+#!/usr/bin/ansible-playbook
+---
+ - name: showig variables
+   hosts: prod
+   tasks:
+      - name: server kenel
+        command: uname -a
+        register: ker
+      - debug: var=ker.stdout
+      - name: server date
+        command: date
+        register: date
+      - debug: var=date.stdout
+      - name: server uptime
+        command: uptime
+        register: up
+      - debug: var=up.stdout
+      - name: server hostname
+        command: hostname
+        register: host
+      - debug: var=host.stdout
+####################case16.yml#####################
+#!/usr/bin/ansible-playbook
+---
+ - name: showig variables
+   hosts: prod
+   tasks:
+      - name: server kenel
+        command: uname -a
+        register: ker
+      - debug: var=ker.stdout
+        tags: kernel
+      - name: server date
+        command: date
+        register: date
+      - debug: var=date.stdout
+        tags: date
+      - name: server uptime
+        tags: up
+        command: uptime
+        register: up
+      - debug: var=up.stdout
+      - name: server hostname
+        command: hostname
+        register: host
+      - debug: var=host.stdout
+        tags: host
+####################case1.yml#####################
+---
+ - name: this is sample
+   hosts: prod
+   tasks:
+        - name: this is like echo
+          debug: msg="welcome to varains"
+####################case2.yml#####################
+---
+ - name: this is sample
+   hosts: prod
+   tasks:
+        - name: this is like echo
+          debug: 
+             msg: "welcome to varains"
+####################case3.yml#####################
+---
+ - name: this is sample
+   hosts: prod
+   tasks:
+        - name: this is like echo
+          debug: 
+             msg:
+               - "welcome to varains"
+               - "welcome to baluins"
+               - "welcome to naniins"
+####################case4.yml#####################
+---
+ - name: this is sample
+   hosts: prod
+   tasks:
+        - name: this is like echo
+          debug: 
+             msg: "this is host name is : {{inventory_hostname}}"
+####################case5.yml#####################
+---
+ - name: this is sample
+   hosts: prod
+   tasks:
+        - name: this is like echo
+          debug:
+             var: inventory_hostname 
+####################case7.yml#####################
+---
+ - name: this is sample
+   hosts: prod
+   tasks:
+      - debug:
+          msg:
+             - " my hostname is {{ansible_hostname}}"
+             - " ip address is {{ansible_facts ['fqdn']}}"
+####################case8.yml#####################
+---
+ - name: this is sample
+   hosts: prod
+   tasks:
+     - name: this is like echo
+       debug:
+           msg: "my hostname is: {{inventory_hostname}}"
+           verbosity: 3
+####################case9.yml#####################
+---
+ - name: showig variables
+   hosts: prod
+   vars:
+      os: "linux"
+      cloud: "aws"
+      tools: "devops"
+   tasks:
+      - name: debug message
+        debug:
+          msg: "i love {{os}}"
+      - name: hello
+        debug:
+         var: cloud

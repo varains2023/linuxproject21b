@@ -1,0 +1,8 @@
+---
+ - name: this is sample
+   hosts: prod
+   tasks:
+     - name: this is like echo
+       debug:
+           msg: "my hostname is: {{inventory_hostname}}"
+           verbosity: 3

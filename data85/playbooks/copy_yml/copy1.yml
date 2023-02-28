@@ -1,0 +1,6 @@
+---
+ - hosts: prod
+   gather_facts: false
+   tasks:
+        - name: "using copy"
+          copy: src=/tmp/file5656 dest=/var/tmp/ force=yes

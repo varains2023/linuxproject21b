@@ -1,0 +1,8 @@
+---
+ - name: showig variables
+   hosts: prod
+   tasks:
+      - name: server kenel
+        command: uname -a
+        register: ker
+      - debug: var=ker
