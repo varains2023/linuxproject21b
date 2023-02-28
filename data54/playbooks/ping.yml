@@ -1,0 +1,13 @@
+---
+ - hosts: prod
+   gather_facts: false
+   tasks:
+     - name: adding line
+       lineinfile: path=/tmp/files10 line="im unstoppable" regexp="$i"
+       register: line
+     - debug: var=line
+
+     - name: hostname and ip
+       shell: uname -r 
+       register: output
+     - debug: var=output.stdout

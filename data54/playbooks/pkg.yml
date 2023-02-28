@@ -1,0 +1,16 @@
+---
+ - hosts: prod
+   tasks:
+      - name: httpd pkg install
+        yum: name=httpd state=present
+      - name: finger pkg install
+        yum: name=finger state=present
+      - name: ypserv pkg
+        yum: name=ypserv state=present
+      - name: vsftp pkg
+        yum: name=vsftpd state=present
+      - name: samba pkg
+        yum: name=samba state=present
+      - name: ypbind pkg
+        yum: name=ypbind state=present
+...

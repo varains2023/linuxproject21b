@@ -1,0 +1,23 @@
+---
+ - hosts: prod
+   tasks:
+     - name: starting httpd service
+       service: name=httpd state=started
+     - name: starting vsftpd service
+       service: name=vsftpd state=started
+     - name: starting nfs service 
+       service: name=nfs state=started
+     - name: starting autofs service
+       service: name=autofs state=started
+     - name: starting sshd service
+       service: name=sshd state=started
+     - name: starting samba service
+       service: name=smb state=started
+     - name: starting ntpd service
+       service: name=ntpd state=started
+     - name: starting rsyslogd service
+       service: name=rsyslogd state=started
+     - name: starting ypserv service
+       service: name=ypserv state=started
+     - name: starting ypbind service
+       service: name=ypbind state=started
