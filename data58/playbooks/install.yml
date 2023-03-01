@@ -1,0 +1,18 @@
+---
+ - hosts: prod
+   name: installing pkg
+   tasks:
+     - name: installing vsftpd pkg
+       yum: name=vsftpd state=present
+     - name: installing ftp pkg
+       yum: name=ftp state=present
+     - name: installing samba pkg
+       yum: name=samba state=present
+     - name: installing finger pkg
+       yum: name=finger state=present
+       tags: fing
+     - name: installing httpd pkg
+       yum: name=httpd state=present
+     - name: installing ntpd pkg
+       yum: name=ntpdate state=present
+       tags: ntpd
