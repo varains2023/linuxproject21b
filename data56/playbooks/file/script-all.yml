@@ -1,0 +1,49 @@
+---
+ - hosts: prod
+   tasks:
+        - name: "using command"
+          command: uptime
+ - hosts: prod
+   tasks:
+        - name: "using shell"
+          shell: date;uname -a;hostname
+ - hosts: prod
+   tasks:
+        - name: "using copy"
+          copy: src=/tmp/file5656 dest=/var/tmp/
+ - hosts: prod
+   tasks:
+        - name: "using file"
+          file: dest=/opt/dir1 state=directory mode=777 owner=vara 
+ - hosts: prod
+   tasks:
+        - name: "using file"
+          file: dest=/opt/file1 state=touch mode=777 owner=vara
+ - hosts: prod
+   tasks:
+        - name: "using lineinfile"
+          lineinfile: dest=/opt/file1 line='10.10.56.222 hostname'
+ - hosts: prod
+   tasks:
+#        - name: "using yum"
+#          yum: name=finger state=absent
+ - hosts: prod
+   tasks:
+        - name: "using service"
+          service: name=httpd state=stopped
+ - hosts: prod
+   tasks:
+        - name: "using group"
+          group: name=iiit state=present gid=6000
+ - hosts: prod
+   tasks:
+        - name: "using user"
+          user: name=lokesh uid=6001 group=6000 createhome=yes password=$6$pRQmNLgH$.SkkdBa6rDgbDirfOzG/HtQXcF2hopB7jaK.fnfvgSPun6kS4A/VjVWe9r4ErcWCexkgUXGeYpEjemOn4BpPH.
+ - hosts: prod
+   tasks:
+        - name: "using fetch"
+          fetch: src=/etc/fstab dest=/opt/{{inventory_hostname}}_fstab flat=yes
+ - hosts: prod
+   tasks:
+        - name: "using synchronize "
+          synchronize: src=/opt/sync dest=/opt/

@@ -1,0 +1,3 @@
+/etc/fstab
+/etc/sysctl.conf
+/var/log/messages

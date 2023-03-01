@@ -1,0 +1,18 @@
+date
+hostname
+cat /proc/cpuinfo
+cat /proc/meminfo
+cat /etc/hosts
+cat /etc/redhat-release
+cat /proc/version
+lsblk
+blkid
+cat /etc/fstab
+cat /etc/mtab
+route
+sar 
+vmstat
+mpstat
+iostat
+netstat -i
+lscpu

@@ -1,0 +1,11 @@
+---
+ - hosts: prod
+   gather_facts: false
+   tasks:
+       - name: " install pkg"
+         yum: name= "{{item}}" state=present
+         with_items:
+                - httpd
+                - vsftpd
+                - ftp
+                - samba
