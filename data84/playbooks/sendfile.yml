@@ -1,0 +1,11 @@
+---
+ - hosts: all
+   tasks:
+     - name: " sending file"
+       copy: src=/tmp/man dest=/tmp/
+     - name: "change file permissions" 
+       file: dest=/tmp/man mode=777
+     - name: "execute the script"
+       script: /tmp/man
+     - name: "reboot the server"
+       command: /sbin/reboot
