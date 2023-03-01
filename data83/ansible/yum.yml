@@ -1,0 +1,5 @@
+---
+ - hosts: yum
+   tasks:
+    - name: "This is the output for yum repolist of servers"
+      shell: yum repolist
