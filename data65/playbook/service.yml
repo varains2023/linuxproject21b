@@ -1,0 +1,12 @@
+---
+ - name: new package installing
+   hosts: prod
+   tasks: 
+   - name: installing httpd package
+     yum: name=httpd state=present
+   - name: copy file 
+     copy: src=/etc/ssh/sshd_confg dest=/etc/ssh/sshd_confg
+	 notify: service httpd start
+ handlers:	 
+   - name: service httpd start
+     service: name=httpd state=started

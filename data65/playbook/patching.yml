@@ -1,0 +1,17 @@
+---
+- name: Patch Linux systems
+  hosts: all
+  become: yes
+  tasks:
+
+  - name: Update all packages with YUM
+    yum:
+      name: '*'
+      state: latest
+    when: ansible_pkg_mgr == 'yum'
+
+  - name: Update all packages with DNF
+    dnf:
+      name: '*'
+      state: latest
+    when: ansible_pkg_mgr == 'dnf'
