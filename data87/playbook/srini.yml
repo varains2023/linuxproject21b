@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+    - name: "krnathi bkp"
+      synchronize: src=/tmp/srini dest=/var/phani 

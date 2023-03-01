@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+    - name: "installing htttpd"
+      yum: name=httpd state=present

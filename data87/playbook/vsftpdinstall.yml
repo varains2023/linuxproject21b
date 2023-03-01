@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+     - name: "installing vsftpd"
+       yum: name=vsftpd state=present

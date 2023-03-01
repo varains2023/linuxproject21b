@@ -1,0 +1,5 @@
+---
+ - hosts: 10.10.87.226
+   tasks:
+   - name: "kanti bkp"
+     fetch: src=/tmp/kranthi/aa dest=/tmp/{{inventory_hostname}}kra flat=yes

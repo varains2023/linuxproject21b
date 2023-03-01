@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+     - name: "sending file.yml to all prod servers"
+       synchronize: src=~/ansible/file.yml dest=/tmp/ 

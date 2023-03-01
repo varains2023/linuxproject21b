@@ -1,0 +1,5 @@
+---
+  - hosts: prod
+    tasks:
+     - name: "taking the backup of the file"
+       synchronize: src=/tmp/output dest=/opt/rahul
