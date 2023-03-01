@@ -1,0 +1,6 @@
+---
+ - name:  no output
+   hosts: all
+   tasks: 
+    - name: check server kernel info
+      command: uname -r

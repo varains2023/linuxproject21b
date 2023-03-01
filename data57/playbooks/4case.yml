@@ -1,0 +1,7 @@
+---
+ - name: debug module case4
+   hosts: all
+   tasks:
+    - name: printing host name using system veriable
+      debug:
+        msg: "the hostname is:- {{inventory_hostname}}"

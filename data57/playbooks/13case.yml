@@ -1,0 +1,9 @@
+---
+ - name: checking ketnel version -------ptint putput
+   hosts: all
+   tasks: 
+     - name: server kernel
+       shell: uname -r
+       register: ker_ver
+     - name: print output
+       debug: var=ker_ver.stdout
