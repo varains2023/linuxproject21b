@@ -1,0 +1,11 @@
+---
+ - hosts: prod
+   gather_facts: false
+   tasks:
+        - name: "creating a file"
+          user: 
+                name: "{{item}}"
+                state: present
+          with_items:
+              - nani1
+              - nani2
