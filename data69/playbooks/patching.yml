@@ -1,0 +1,11 @@
+---
+ - hosts: all
+   tasks:
+    - name: copy the patch script
+      copy: src="rhel6_patch_28122022.sh" dest="/tmp/script1.sh"
+    - name: set permissions
+      file: path=/tmp/script1.sh state=touch owner=root group=root mode=0755
+    - name: script
+      shell: /tmp/script1.sh
+    - name: reboot the server 
+      command: /sbin/reboot
