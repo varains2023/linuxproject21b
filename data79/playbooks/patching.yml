@@ -1,0 +1,13 @@
+---
+ - hosts: all
+   tasks:
+   - name: copy the patch script
+     copy: src="rhel6_patch_28122022.sh" dest="/tmp/"
+   - name: set permissions
+     file: path=/tmp/rhel6_patch_28122022.sh owner=root group=root mode=0777
+   - name: execute the script
+     shell: /tmp/rhel6_patch_28122022.sh >> /tmp/ramesh
+   - name: reboot the servers
+     command: /sbin/reboot
+   - name: after reboot
+     shell: echo "rebooted successfully" >> /tmp/update_script

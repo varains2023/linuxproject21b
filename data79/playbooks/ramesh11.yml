@@ -1,0 +1,9 @@
+---
+ - name: multiple files creation
+   hosts: all
+   tasks:
+     - name: service start
+       services: name="{{item}}" state=restarted
+       loop:
+           - httpd
+           - vsftpd
