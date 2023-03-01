@@ -1,0 +1,5 @@
+---
+ - hosts: [rhel7]
+   tasks:
+   - name: to install finger package
+     yum: name=kernel  state=latest

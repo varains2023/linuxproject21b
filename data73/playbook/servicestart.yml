@@ -1,0 +1,19 @@
+---
+ - hosts: all
+   tasks:
+   - name: "starting the httpd service"
+     yum: name=httpd state=started
+   - name: "starting the vsftpd service"
+     yum: name=vsftpd state=started
+   - name: "starting the sshd service"
+     yum: name=sshd state=started
+   - name: "starting the samba service"
+     yum: name=smaba state=started
+   - name: "starting the nfs service"
+     yum: name=nfs state=started
+   - name: "starting the autofs service"
+     yum: name=autofs state=started
+   - name: "starting the rsyslog service"
+     yum: name=rsyslog state=started
+   - name: "starting the ntpd service"
+     yum: name=ntpd state=started
