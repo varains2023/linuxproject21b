@@ -1,0 +1,9 @@
+---
+ - name: start service
+   hosts: all
+   tasks:
+   - name: start all services
+     service: name="{{item}}" state=restarted enabled=yes
+     loop:
+     - vsftpd
+     - httpd

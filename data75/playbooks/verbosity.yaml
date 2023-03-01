@@ -1,0 +1,10 @@
+---
+ - name: rbk
+   hosts: all
+   tasks: 
+   - name: server info
+     shell: uptime
+     register: uptime
+   - debug: 
+        var: uptime.stdout
+        verbosity: 1
