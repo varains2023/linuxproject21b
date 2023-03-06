@@ -1,0 +1,7 @@
+---
+ - hosts: all
+   tasks:
+   gather_facts: false
+    - name: "creating file and directory"
+      file: dest=/tmp/prathipati/shanmuk state=touch
+    #file: dest=/tmp/prathipati state=directory

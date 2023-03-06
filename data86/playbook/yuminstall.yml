@@ -1,0 +1,5 @@
+---
+ - hosts: all
+   tasks:
+   - name: "yum install "
+     yum: name=finger state=present

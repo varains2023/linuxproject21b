@@ -1,0 +1,14 @@
+---
+ - hosts: dev
+   remote_users: ansible
+   become: yes
+   become_user: root
+   tasks: 
+   - name: copy the patch script
+     copy: src="/root/sysinfo.sh" dest="/tmp/"
+   - name: change permission
+     file: path=/tmp/sysinfo.sh owner=root group=root mode=777
+   - name: execute the script
+     script: /tmp/sysinfo.sh 
+   - name: reboot the host
+     command: /sbin/reboot

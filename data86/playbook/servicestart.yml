@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+   - name: "services start"
+     service: name=httpd state=started

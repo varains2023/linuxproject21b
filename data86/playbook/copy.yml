@@ -1,0 +1,5 @@
+---
+ - hosts: vara-sys86-3
+   tasks:
+    - name: "Copy Files"
+      copy: src=/root/hosts dest=/tmp/

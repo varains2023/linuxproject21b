@@ -1,0 +1,13 @@
+---
+  - hosts: vara-sys86-4
+    source: /tmp/vars
+    tasks:
+            - name: create directories under directory
+              file: 
+                    state: directory
+                    recurse: yes
+                    path: "{{dir_create}}"
+            - name: copyfile
+              copy:
+                    src: "{{log_file}}"
+                    dest: "{{dir_create}}"
