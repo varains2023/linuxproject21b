@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks: 
+   - name: "uptime output"
+     shell: uptime >> /tmp/uptime

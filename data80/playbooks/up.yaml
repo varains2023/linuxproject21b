@@ -1,0 +1,7 @@
+---
+ - hosts: all
+   tasks:
+    - name: uname
+      shell: uname -r
+      register: kernel
+    - debug: var=kernel.stdout
