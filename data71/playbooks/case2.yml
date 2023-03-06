@@ -1,0 +1,7 @@
+---
+ - name: 
+   hosts: all
+   tasks: 
+     - name: 
+       debug:
+         msg: 'this msg is varains'

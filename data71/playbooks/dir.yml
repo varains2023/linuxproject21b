@@ -1,0 +1,10 @@
+---
+ - hosts: prod
+   gather_facts: false
+   tasks:
+      - name: "creating dir"
+        file: path=/tmp/"{{item}}" state=directory
+        loop:
+             - satish
+             - mahesh
+             - nags

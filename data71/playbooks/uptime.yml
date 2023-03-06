@@ -1,0 +1,6 @@
+---
+ - hosts: prod
+   tasks: 
+    - name: "output uptime"
+      gather_facts: False
+      command: uptime

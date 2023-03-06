@@ -1,0 +1,8 @@
+---
+ - hosts: prod
+   tasks:
+    - name: "output of uptime"
+      copy: content='new line'  dest=/etc/hosts
+   tasks:
+    - name: "output of file"
+      file: src=/tmp/file01 state=directory

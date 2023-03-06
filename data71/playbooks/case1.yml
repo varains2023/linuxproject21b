@@ -1,0 +1,6 @@
+---
+ - name: checking 
+   hosts: all
+   tasks:
+     - name: testing
+       debug: msg='just print'

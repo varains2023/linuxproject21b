@@ -1,0 +1,13 @@
+---
+ - hosts: all
+   tasks: 
+     - name: "mounting with mnt"
+       shell: mount /dev/sr0 /mnt
+     - name: "copy the rhel610"
+       copy: src=/tmp/rhel610.repo dest=/etc/yum.repos.d/
+     - name: clean and yum
+       shell: yum clean all ; yum repolist
+     - name: updating kernel
+       shell: yum update kernel -y
+     - name: rebooting the server 
+       command: /sbin/reboot

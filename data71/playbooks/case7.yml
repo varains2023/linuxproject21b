@@ -1,0 +1,9 @@
+---
+ - name: msg
+   hosts: all
+   tasks:
+     - name: kingkohli
+       debug:
+         msg: 
+             my hostname is {{ansible_hostname}}
+             ip address is {{ansible_facts['fqdn']}}

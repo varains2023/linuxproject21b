@@ -1,0 +1,11 @@
+---
+ - name: 
+   hosts: nani-sys-1
+   gather_facts: false
+   tasks: 
+      - name: copying fstab
+        copy: src=/etc/ssh/sshd_config dest=/etc/ssh/
+        notify: restarting sshd service
+   handlers:
+      - name: restarting sshd service
+        service: name=sshd state=restarted

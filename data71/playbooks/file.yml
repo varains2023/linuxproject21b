@@ -1,0 +1,11 @@
+---
+ - hosts: prod
+   tasks: 
+    - name: "taking output of file"
+      file: path=/tmp/file11 state=touch
+    - name: "taking output of file"
+      lineinfile: dest=/tmp/file11 line='this is first file'
+    - name: "taking output of file"
+      fetch: src=/tmp/file11 dest=/var/{{inventory_hostname}}-file11 flat=yes
+    - name: "taking output of file"
+      synchronize: src=/var/nani-sys-1-file11 dest=/opt/ 

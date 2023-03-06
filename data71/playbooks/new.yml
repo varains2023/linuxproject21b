@@ -1,0 +1,11 @@
+---
+ - hosts: all
+   vars: 
+      dir_create: /tmp/vlab/v1
+      log_files: /var/log/messages
+      rm_lab: /tmp/vlab/v1
+      rm_ins: /tmp/vlab
+   tasks: 
+      - name: creation directory
+        file: dest="{{dir_create}}" state=present recurse=yes
+        copy: src="{{log_files}}" dest="{{dir_create}}"

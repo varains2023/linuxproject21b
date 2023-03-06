@@ -1,0 +1,9 @@
+---
+ - hosts: nani-sys-1
+   tasks:
+      - file: path=/tmp/"{{item}}" state=touch
+        with_items:
+                   - naga1
+                   - dheeru1
+                   - hadavidi1
+                   - satish1

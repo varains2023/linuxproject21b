@@ -1,0 +1,11 @@
+---
+ - hosts: prod
+   gather_facts: false
+   tasks: 
+     - name: "service stop"
+       service: name="{{item}}" state=restarted
+       with_items: 
+            - httpd
+            - vsftpd
+            - nfs
+            - autofs

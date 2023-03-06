@@ -1,0 +1,10 @@
+---
+ - hosts: prod
+   gather_facts: false
+   tasks: 
+    - name: "Start service httpd, if not started"
+      service: name=httpd state=started enabled=yes
+    - name: "Start service vsftpd, if not started"
+      service: name=vsftpd state=started enabled=yes
+    - name: "Start service smb, if not started"
+      service: name=smb state=started enabled=yes

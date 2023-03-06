@@ -1,0 +1,18 @@
+---
+ - name: nagraj
+   hosts: all
+   tasks:
+      - name: vamsi
+        command: uptime
+        register: king
+      - debug: var=king.stdout
+      
+      - name: nagraj
+        command: date
+        register: king1
+      - debug: var=king1.stdout
+
+      - name: sai
+        command: df -h
+        register: king2
+      - debug: var=king2.stdout_lines

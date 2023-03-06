@@ -1,0 +1,11 @@
+---
+ - hosts: all
+   vars:
+      dir_create: /tmp/naniins
+      log_file: /var/log/messages
+   tasks:
+      - name: removing directory under tmp fs
+        file:
+            path: "{{dir_create}}"
+            state: present
+            recurse: yes
