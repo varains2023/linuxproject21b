@@ -1,0 +1,6 @@
+---
+ - hosts: prod
+   tasks:
+     - name: "creating a link file"
+       shell: ln /tmp/srinu /tmp/srinu1
+

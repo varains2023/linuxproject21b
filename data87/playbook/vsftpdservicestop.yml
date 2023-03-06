@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+    - name: "stopping the vsftd"
+      service: name=vsftpd state=stopped

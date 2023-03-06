@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks: 
+    - name: "taking bkp of /etc/fstab"
+      fetch: src=/etc/fstab dest=/tmp/fstab.bkp

@@ -1,0 +1,9 @@
+---
+ - hosts: prod
+   gather_facts: false
+   tasks:
+        - name: "creating a file"
+          command: touch /var/tmp/"{{item}}"
+          with_items:
+                - file1
+                - balu1

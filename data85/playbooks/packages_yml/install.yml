@@ -1,0 +1,28 @@
+---
+ - hosts: prod
+   gather_facts: false
+   tasks:
+        - name: "using yum httpd"
+          yum:  name=httpd state=present 
+          register: http_output
+        - debug: var=http_output.results
+        - name: "using yum vsftpd"
+          yum:  name=vsftpd state=present 
+          register: vsftp_output
+        - debug: var=vsftp_output.results
+        - name: "using yum finger"
+          yum:  name=finger state=present 
+          register: finger_output
+        - debug: var=finger_output.results
+        - name: "using yum nis"
+          yum:  name=ypserv state=present 
+          register: nis_output
+        - debug: var=nis_output.results
+        - name: "using yum ftp"
+          yum:  name=ftp state=present 
+          register: ftp_output
+        - debug: var=ftp_output.results
+        - name: "using yum samba"
+          yum:  name=samba state=present
+          register: sam_output
+        - debug: var=sam_output.results

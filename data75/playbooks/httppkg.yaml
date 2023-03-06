@@ -1,0 +1,11 @@
+---
+ - hosts: all
+   tasks: 
+   - name: "install pkg"
+     yum: name=finger state=present
+   - name: "install samba pkg"
+     yum: name=samba state=present
+   - name: "service samba pkg"
+     service: name=smb state=started enabled=yes
+   - name: "service httpd pkg"
+     service: name=httpd state=started enabled=yes

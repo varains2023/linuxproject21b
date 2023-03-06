@@ -1,0 +1,5 @@
+---
+  - hosts: all
+    tasks:
+    - name: "restart the service"
+      service: name=httpd state=restarted

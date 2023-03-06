@@ -1,0 +1,10 @@
+---
+ - name: install pkgs
+   hosts: all
+   tasks:
+   - name: pkg install
+     yum: name="{{item}}" state=present
+     loop:
+       - vsftpd
+       - httpd
+       - finger

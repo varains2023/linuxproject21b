@@ -1,0 +1,5 @@
+---
+  - hosts: all
+    tasks:
+     - name: "copying hosts file to local"
+       fetch: src=/etc/hosts dest=/root/ansible

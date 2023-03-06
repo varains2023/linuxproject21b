@@ -1,0 +1,12 @@
+---
+ - hosts: prod
+   gather_facts: false
+   tasks:
+       - name: " install pkg"
+         service: name="{{item}}" state=restarted
+         loop:
+                - httpd
+                - vsftpd
+                - smb
+         register: loop
+       - debug: var=loop.state

@@ -1,0 +1,10 @@
+---
+ - hosts: prod
+   gather_facts: false
+   tasks:
+       - name: " install pkg"
+         service: name="{{item}}" state=restarted
+         with_items:
+                - httpd
+                - vsftpd
+                - smb

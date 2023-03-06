@@ -1,0 +1,11 @@
+---
+ - hosts: all
+   tasks:
+    - name: "http install"
+      yum: name=httpd state=prasent
+    - name: "vsftp install"
+      yum: name=vsftpd state=prasent
+    - name: "finger install"
+      yum: name=ftp state=prasent
+    - name: "samba install"
+      yum: name=samba state=prasent

@@ -1,0 +1,8 @@
+---
+- hosts: prod
+  gather_facts: false
+  tasks:
+        - name: "using service"
+          service:
+                name: vsftpd
+                state: restarted

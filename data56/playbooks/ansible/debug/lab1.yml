@@ -1,0 +1,9 @@
+---
+ - hosts: prod
+   tasks:
+      - name: hi 
+        file: dest=/tmp/balu1111 state=touch
+      - name: hi
+        file: dest=/tppmp/balu1111 state=touch
+      - name: hi
+        file: dest=/tmp/balu222 state=touch

@@ -1,0 +1,11 @@
+---
+ - hosts: prod
+   gather_facts: false
+   tasks:
+        - name: "creating a file"
+          file: 
+             dest: /var/tmp/"{{item}}"
+             state: touch
+             with_items:
+                - file1
+                - balu1

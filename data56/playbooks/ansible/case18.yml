@@ -1,0 +1,11 @@
+---
+ - hosts: prod
+   gather_facts: false
+   tasks:
+      - name: hi is basic
+        copy: src=/etc/ssh/sshd_config dest=/tmp/
+        notify: restarte the sshd
+   handlers:
+      - name: sshd
+        service: name=sshd state=restarted
+        listen: restarte the sshd

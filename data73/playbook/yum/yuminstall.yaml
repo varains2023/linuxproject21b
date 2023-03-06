@@ -1,0 +1,6 @@
+---
+ - hosts: [prod]
+   tasks: 
+   - name: to install finger package
+     yum: name=finger state=present
+  

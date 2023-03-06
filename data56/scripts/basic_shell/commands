@@ -1,0 +1,9 @@
+date
+uptime
+hostname
+route
+sar
+vmstat
+mpstat
+iostat
+lscpu
