@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks: 
+    - name: "fetch copy the file from tmp/bkpfstab to var/bkp"
+      fetch: src=/tmp/bkpfstb dest=/var/{{inventory_hostname}}_bkpfstb flat=yes
