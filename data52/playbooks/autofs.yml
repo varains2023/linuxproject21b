@@ -1,0 +1,6 @@
+---
+ - hosts: all
+   gather_facts: false
+   tasks:
+        - name: "To install the autofs package"
+          yum: name=autofs state=present
