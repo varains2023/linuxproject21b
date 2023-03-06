@@ -1,0 +1,11 @@
+---
+ - name: multiple direcories
+   hosts: all
+   tasks:
+    - name: direcories
+      file: dest=/tmp/"{{item}}" state=directory
+      with_items:
+              - dir1
+              - dir2
+              - dir3
+              - dir4

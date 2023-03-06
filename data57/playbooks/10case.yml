@@ -1,0 +1,12 @@
+---
+ - name: showing veriables
+   hosts: all
+   vars:
+         os: "linux"
+         cloud: "aws"
+         tools: "devops"
+   tasks:
+     - debug: 
+         msg: "we will provide training {{os}}"
+     - debug: msg="and lab experiance in {{cloud}}"
+     - debug: msg="basic knowladge in {{tools}}"

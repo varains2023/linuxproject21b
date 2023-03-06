@@ -1,0 +1,6 @@
+---
+ - name: debug module case 1
+   hosts: all
+   tasks:
+    - name: desplay bellow message
+      debug: msg="welcome to varains"
