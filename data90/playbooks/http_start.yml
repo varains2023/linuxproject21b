@@ -1,0 +1,6 @@
+---
+ - hosts: vlab
+   tasks:
+    - name: "start httpd service "
+      service: name=httpd state=started
+      
