@@ -1,0 +1,12 @@
+---
+ - hosts: prod
+   gather_facts: false
+   tasks:
+        - name: "creating a file"
+          user: 
+                name: "{{item}}"
+                state: absent
+                remove: yes
+          with_items:
+              - balu1
+              - balu2

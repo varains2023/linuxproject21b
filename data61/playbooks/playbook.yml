@@ -1,0 +1,13 @@
+---
+ - hosts: all
+   tasks:
+     - name: "install ntp package"
+       yum: name=ntp state=present
+     - name: "start sshd service" 
+       service: name=sshd state=started
+     - name: "copy file hosts file in ansible server"
+       copy: src=/etc/hosts dest=/tmp/file1
+     - name: "create a file"
+       file: path=/tmp/tmp1 state=touch
+     - name: "create a directory"
+       file: path=/tmp/dir1 state=directory

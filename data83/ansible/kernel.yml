@@ -1,0 +1,5 @@
+---
+ - hosts: update
+   tasks:
+    - name: "update the kernel"
+      shell: yum update kernel -y -v

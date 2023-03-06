@@ -1,0 +1,7 @@
+---
+ - name: remove httpd packsge
+   hosts: prod 
+   tasks:
+   - name: remove httpd packsge
+     name: httpd
+	 state: absent

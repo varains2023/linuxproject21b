@@ -1,0 +1,5 @@
+---
+  - hosts: all
+    tasks:
+    - name: "latest update the package"
+      yum: name=finger state=latest

@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+     - name: "unistalling the httpd"
+       yum: name=httpd state=absent

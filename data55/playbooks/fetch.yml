@@ -1,0 +1,6 @@
+---
+ - hosts: all
+   tasks:
+     - name: " sending file"
+       fetch: src=/etc/fstab dest=/tmp/
+   

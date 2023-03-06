@@ -1,0 +1,15 @@
+---
+ - hosts: yum
+   tasks:
+    - name: "To install httpd packages"
+      yum: name=httpd state=present
+    - name: "To install vsftpd packages"
+      yum: name=vsftpd state=present
+    - name: "To install samba packages"
+      yum: name=samba state=present
+    - name: "To install finger packages"
+      yum: name=finger state=present
+    - name: "To install ntp packages"
+      yum: name=ntp state=present
+    - name: "To install rsyslog packages"
+      yum: name=rsyslog state=present

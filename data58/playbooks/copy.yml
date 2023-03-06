@@ -1,0 +1,11 @@
+---
+ - hosts: prod 
+   name: start the service & copy info
+   tasks:
+     - name: copy sshd configuation
+       copy: src=/etc/ssh/sshd_config dest=/etc/ssh/sshd_config
+       notify: service restart
+   handlers:
+     - name: service restart
+       service: name=sshd state=restarted
+       listen: service restart

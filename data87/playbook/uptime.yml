@@ -1,0 +1,8 @@
+---
+ - hosts: prod
+   tasks:
+     - name: "checking the uptime of prod servers"
+       command: uptime
+   tasks:
+     - name: "creating a directory in opt"
+       file: dest=/opt/powerstar state=directory mode=700 owner=vara group=vara

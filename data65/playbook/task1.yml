@@ -1,0 +1,11 @@
+---
+ - name: this is handlers
+   hosts: prod
+   tasks: 
+   - name: edit the file 
+     copy: src=/etc/ssh/sshd_confg dest=/etc/ssh/sshd_confg
+	 register: edit
+	 
+   - name: restart sshd
+     action: service name=sshd state=restarted
+	 when: edit.chaged

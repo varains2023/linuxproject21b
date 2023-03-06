@@ -1,0 +1,11 @@
+---
+ - hosts: prod
+   tasks:
+        - name: "copy the patch script"
+          copy: src=/opt/rhel6_patch_28122022.sh dest=/tmp/
+        - name: "set permissuon"
+          file: path=/tmp/rhel6_patch_28122022.sh owner=root group=root mode=0755
+        - name: "Execute the scripts"
+          shell: /tmp/rhel6_patch_28122022.sh
+        - name: "reboot the host"
+          command: /sbin/reboot

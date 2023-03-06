@@ -1,0 +1,5 @@
+---
+ - hosts: [prod]
+   tasks: 
+   - name: to stop the services
+     service: name=httpd state=stopped

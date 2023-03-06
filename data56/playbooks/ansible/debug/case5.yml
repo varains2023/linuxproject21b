@@ -1,0 +1,7 @@
+---
+ - name: this is sample
+   hosts: prod
+   tasks:
+        - name: this is like echo
+          debug:
+             var: inventory_hostname 

@@ -1,0 +1,7 @@
+---
+- hosts: prod
+  tasks:
+        - name: "enabled the service"
+          service:
+                name: vsftpd
+                enabled: yes

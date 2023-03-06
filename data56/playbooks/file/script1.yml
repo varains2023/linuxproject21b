@@ -1,0 +1,6 @@
+---
+ - hosts: prod
+   tasks:
+        - name: "creating a files and directory"
+          file: path=/var/tmp/file56 state=touch
+          file: path=/var/tmp/dir56 state=directory

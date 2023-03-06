@@ -1,0 +1,11 @@
+---
+ - hosts: all
+   tasks: 
+     - user: name="{{ foo }}" state=present
+       with_items: 
+           - chiru
+           - venky
+           - nag
+           - balakrishna
+
+

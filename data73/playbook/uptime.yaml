@@ -1,0 +1,6 @@
+---
+ - hosts: prod
+   tasks:
+   - name: confing hosts file to local
+     fetch: src=/etc/hosts dest=/tmp/vali
+     

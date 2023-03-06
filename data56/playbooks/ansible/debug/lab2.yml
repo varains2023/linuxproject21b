@@ -1,0 +1,16 @@
+---
+ - hosts: prod
+   tasks:
+      - name: install
+        yum: name=httpd state=present
+      - debug: verbosity=3
+      - name: service start
+        service: name=httpd state=started
+      - name: copy
+        synchronize: src=/opt/ansible/debug/debugfile dest=/var/www/html/index.html
+      - debug: verbosity=3
+      - name: check
+        shell: service httpd status
+        register: ch
+      - debug: var=ch
+      - debug: verbosity=3

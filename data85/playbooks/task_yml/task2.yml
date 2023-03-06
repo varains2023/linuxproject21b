@@ -1,0 +1,12 @@
+---
+ - hosts: prod
+   gather_facts: false
+   vars:
+     dir_create: /tmp/varains/v1/v2/v3/
+     log_file: /var/log/messages
+     rm_lab: /tmp/varains/v1/
+   tasks:
+       - name: delete a file
+         file:
+           dest: "{{rm_lab}}"
+           state: absent

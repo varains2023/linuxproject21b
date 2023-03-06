@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+        - name: "copy the files"
+          copy: src=/tmp/file5656 dest=/var/tmp/

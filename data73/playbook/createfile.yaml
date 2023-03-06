@@ -1,0 +1,5 @@
+---
+ - hosts: [prod]
+   tasks:
+   - name: create a file
+     file: path=/tmp/file1 state=touch

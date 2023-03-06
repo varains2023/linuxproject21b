@@ -1,0 +1,5 @@
+---
+  - hosts: prod
+    tasks:
+       - name: "creating a file"
+         file: dest=/tmp/srinu state=touch

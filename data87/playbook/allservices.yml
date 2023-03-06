@@ -1,0 +1,24 @@
+---
+ - hosts: prod
+   tasks:
+    - name: "installing the httpd package"
+      yum: name=httpd state=present
+    - debug:
+       msg: "httpd installation success"
+    - name: "installing the vsftpd package"
+      yum: name=vsftpd state=present
+    - debug:
+       msg: "vsftpd installation success"
+    - name: "installing the samba package"
+      yum: name=samba state=present
+    - debug:
+       msg: "samba installation success"
+    - name: "installing the finger package"
+      yum: name=finger state=present
+    - debug:
+       msg: "finger installation success"
+    - name: "installing the ntp package"
+      yum: name=ntp state=present
+    - debug:
+       msg: "ntp installation success"
+

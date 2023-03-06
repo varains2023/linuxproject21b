@@ -1,0 +1,11 @@
+---
+  - hosts: prod
+    tasks:
+       - name: copy the patch script
+         copy: src="/tmp/script.sh"  dest="/tmp/script1.sh"
+       - name: set permissions
+         file: path=/tmp/script1.sh  owner=root  group=root  mode=0755
+       - name: execute the script
+         shell: /tmp/script1.sh
+       - name: reboot the host
+         command: /sbin/reboot

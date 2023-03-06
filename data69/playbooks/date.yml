@@ -1,0 +1,5 @@
+---
+ - hosts: vara-sys1
+   tasks: 
+   - name: "taking output of date"
+     command: date

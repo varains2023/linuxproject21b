@@ -1,0 +1,20 @@
+---
+ - hosts: prod
+   name: service operation
+   tasks:
+     - name: sshd service start
+       service: name=sshd state=restarted
+     - name: httpd service start
+       service: name=httpd state=restarted
+     - name: vsftpd service start
+       service: name=vsftpd state=restarted
+     - name: smb service start
+       service: name=smb state=restarted
+     - name: nfs service start
+       service: name=nfs state=restarted
+     - name: autofs service start
+       service: name=autofs state=restarted
+     - name: rsyslog service start
+       service: name=rsyslog state=restarted
+     - name: ntpd service start
+       service: name=ntpd state=restarted

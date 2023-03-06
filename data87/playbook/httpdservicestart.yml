@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+    - name: "starting the httpd package"
+      service: name=httpd state=started enabled=yes

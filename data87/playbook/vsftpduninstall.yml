@@ -1,0 +1,5 @@
+---
+ - hosts: prod
+   tasks:
+    - name: "uninstalling vsftpdd"
+      yum: name=vsftpd state=absent
